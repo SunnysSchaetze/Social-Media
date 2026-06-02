@@ -6,27 +6,35 @@
 <title>Social Media</title>
 
 <style>
+html {
+    background-color: #ff7f00; /* Außenfarbe */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    min-height: calc(100vh - 20px);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: #000000; /* Schwarzer Container */
     font-family: Arial, sans-serif;
+    color: orange;
+
+    border-radius: 25px; /* Abgerundete Ecken */
+    overflow: hidden;
 }
 
 .social-media {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     font-size: clamp(1.2rem, 2vw, 2rem);
-    color: orange;
     text-align: center;
     padding: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .social-media span {
