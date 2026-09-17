@@ -67,6 +67,17 @@ body{
     filter: brightness(1.5) drop-shadow(0 0 5px orange);
 }
 
+.social-media .hover-label {
+    display: none;
+    margin-left: 8px;
+    color: orange;
+    font-weight: bold;
+}
+
+.social-media a:hover .hover-label {
+    display: inline;
+}
+
 @media (max-width: 600px) {
     .social-media {
         gap: 15px;
@@ -340,18 +351,22 @@ body{
 
     <a href="https://www.facebook.com/profile.php?id=61583119800906" target="_blank" aria-label="Facebook">
         <img src="Facebook.png" alt="Facebook">
+        <span class="hover-label">Facebook</span>
     </a>
 
     <a href="https://www.instagram.com/sunnysschaetze/" target="_blank" aria-label="Instagram">
         <img src="Instagram.png" alt="Instagram">
+        <span class="hover-label">Instagram</span>
     </a>
 
     <a href="https://www.tiktok.com/@sunnys.schaetze" target="_blank" aria-label="TikTok">
         <img src="TikTok.png" alt="TikTok">
+        <span class="hover-label">TikTok</span>
     </a>
 
     <a href="https://tellonym.me/sunnys.schaetze" target="_blank" aria-label="Tellonym">
         <img src="Tellonym.png" alt="Tellonym">
+        <span class="hover-label">Tellonym</span>
     </a>
 </div>
 
