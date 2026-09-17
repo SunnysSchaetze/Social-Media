@@ -44,6 +44,7 @@ body{
     font-size: clamp(1.2rem, 2vw, 2rem);
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 .social-media span {
@@ -69,13 +70,18 @@ body{
 
 .social-media .hover-label {
     display: none;
-    margin-left: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+    margin: 0;
     color: orange;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .social-media a:hover .hover-label {
-    display: inline;
+    display: block;
 }
 
 @media (max-width: 600px) {
@@ -245,6 +251,7 @@ body{
             translate(var(--sx), var(--sy))
             scale(.18);
     }
+
     10% {
         opacity: .95;
         transform:
@@ -252,6 +259,7 @@ body{
             translate(var(--sx), var(--sy))
             scale(1);
     }
+
     30% {
         opacity: .85;
         transform:
@@ -259,6 +267,7 @@ body{
             translate(var(--mx), var(--my))
             scale(.9);
     }
+
     60% {
         opacity: .48;
         transform:
@@ -266,6 +275,7 @@ body{
             translate(var(--ex), var(--ey))
             scale(.55);
     }
+
     100% {
         opacity: 0;
         transform:
@@ -283,6 +293,7 @@ body{
             translate(0,0)
             scale(.2);
     }
+
     20% {
         opacity: .8;
         transform:
@@ -293,6 +304,7 @@ body{
             )
             scale(1);
     }
+
     65% {
         opacity: .55;
         transform:
@@ -303,6 +315,7 @@ body{
             )
             scale(.8);
     }
+
     100% {
         opacity: 0;
         transform:
@@ -322,18 +335,21 @@ body{
             translate(-50%, -50%)
             scale(0);
     }
+
     15% {
         opacity: 1;
         transform:
             translate(-50%, -50%)
             scale(1.8);
     }
+
     45% {
         opacity: .8;
         transform:
             translate(-50%, -50%)
             scale(1);
     }
+
     100% {
         opacity: 0;
         transform:
@@ -460,18 +476,22 @@ function erzeugeBewegungsEffekt(x, y) {
 
     createStaub(trailX, trailY);
     createStaub(trailX, trailY);
+
     createStaub(
         trailX - nx * 6,
         trailY - ny * 6
     );
+
     createStaub(
         trailX - nx * 12,
         trailY - ny * 12
     );
+
     createStaub(
         trailX - nx * 25,
         trailY - ny * 25
     );
+
     createStaub(
         trailX - nx * 40,
         trailY - ny * 40
@@ -745,6 +765,7 @@ function klickEffekt(x, y) {
     }
 
     for (let i = 0; i < 18; i++) {
+
         createExplosionStaub(
             x,
             y
